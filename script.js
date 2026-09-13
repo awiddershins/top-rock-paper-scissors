@@ -23,6 +23,7 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 
+//function to play one round of rock paper scissors with score update and outcome
 function playRound(human, computer){
     const choiceArray = ["rock", "paper", "scissors"];
     const outcomeMatrix = [['t', 'w', 'l'], ['l', 't', 'w'], ['w', 'l', 't']];
@@ -31,15 +32,32 @@ function playRound(human, computer){
     const humanIndex = choiceArray.indexOf(human);
     switch(outcomeMatrix[computerIndex][humanIndex]) {
         case 't':
-            return "It's a tie!";
+            console.log("It's a tie!");
+            break;
         case 'w':
-            humanScore += humanScore;
-            return "You win!";
+            humanScore++;
+            console.log("You win!");
+            break;
         case 'l':
-            computerScore += computerScore;
-            return "You lose!";
+            computerScore++;
+            console.log("You lose!");
+            break;
             
     }
 }
 
-console.log(playRound(getHumanChoice(), getComputerChoice()));
+//function to play five rounds of rock paper scissors
+
+function playGame(){
+    for (let i = 0; i < 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+    switch((humanScore - computerScore) > 0) {
+        case true:
+            return "You win! Score - " + humanScore + " to " + computerScore;
+        case false:
+            return "You lose :( Score - " + humanScore + " to " + computerScore;
+    }
+}
+
+console.log(playGame());
