@@ -26,8 +26,8 @@ let computerScore = 0;
 //function to play one round of rock paper scissors with score update and outcome
 function playRound(human, computer){
     const choiceArray = ["rock", "paper", "scissors"];
-    const outcomeMatrix = [['t', 'w', 'l'], ['l', 't', 'w'], ['w', 'l', 't']];
     //matrix of outcomes assuming computerChoice as rows and human choice as columns
+    const outcomeMatrix = [['t', 'w', 'l'], ['l', 't', 'w'], ['w', 'l', 't']];
     const computerIndex = choiceArray.indexOf(computer);
     const humanIndex = choiceArray.indexOf(human);
     switch(outcomeMatrix[computerIndex][humanIndex]) {
