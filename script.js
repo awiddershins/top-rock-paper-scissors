@@ -52,11 +52,15 @@ function playGame(){
     for (let i = 0; i < 5; i++){
         playRound(getHumanChoice(), getComputerChoice());
     }
-    switch((humanScore - computerScore) > 0) {
-        case true:
-            return "You win! Score - " + humanScore + " to " + computerScore;
-        case false:
-            return "You lose :( Score - " + humanScore + " to " + computerScore;
+    if (humanScore == computerScore) {
+        return "You tied o.o Score - " + humanScore + " to " + computerScore;
+    }
+    else { switch((humanScore - computerScore) > 0) {
+            case true:
+                return "You win! Score - " + humanScore + " to " + computerScore;
+            case false:
+                return "You lose :( Score - " + humanScore + " to " + computerScore;
+        }
     }
 }
 
