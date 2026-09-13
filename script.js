@@ -7,8 +7,15 @@ function getComputerChoice(){
             case 1:
                 return "paper";
             case 2:
-                return "scissor";
+                return "scissors";
         }
     })();
     return rpsChoice;
 };
+
+// prompt human to get human choice
+
+function getHumanChoice(){
+   return rpsHumanChoice = prompt(); 
+}
+console.log(getHumanChoice());
