@@ -14,10 +14,18 @@ function getComputerChoice(){
 };
 
 // prompt human to get human choice
-
+/*
 function getHumanChoice(){
    return rpsHumanChoice = prompt().toLowerCase(); 
 }
+*/
+
+//get human choice from button click
+let humanChoice = "";
+
+document.getElementById("rock").addEventListener("click", () => {playRound("rock", getComputerChoice());});
+document.getElementById("paper").addEventListener("click", () => {playRound("rock", getComputerChoice());});
+document.getElementById("scissors").addEventListener("click", () => {playRound("rock", getComputerChoice());});
 
 //global variables to track the game
 let humanScore = 0;
@@ -64,4 +72,4 @@ function playGame(){
     }
 }
 */
-console.log(playGame());
+/*console.log(playGame());*/
