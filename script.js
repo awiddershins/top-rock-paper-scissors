@@ -47,7 +47,7 @@ function playRound(human, computer){
 }
 
 //function to play five rounds of rock paper scissors
-
+/*
 function playGame(){
     for (let i = 0; i < 5; i++){
         playRound(getHumanChoice(), getComputerChoice());
@@ -63,5 +63,5 @@ function playGame(){
         }
     }
 }
-
+*/
 console.log(playGame());
